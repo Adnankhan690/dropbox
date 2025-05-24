@@ -53,21 +53,14 @@ export default function Home () {
               color: textColor,
               willChange: 'transform, background-color, color'
             }}
-            className={`${styles.icon} border-[1px] border-[#4000FF] p-5 font-bold`}
+            className={`${styles.icon} p-5 font-bold`}
           >
+            <hr className='absolute top-[-1px] left-[-100vw] w-[200vw] h-[1px] bg-white ' />
+            <hr className='absolute bottom-[-1px] left-[-100vw] w-[200vw] h-[1px] bg-white ' />
+            <hr className='absolute left-[-1px] top-[-100vh] w-[1px] h-[200vh] bg-white ' />
+            <hr className='absolute right-[-1px] top-[-100vh] w-[1px] h-[200vh] bg-white ' />
             Icon
           </motion.div>
-
-          {/* <motion.div
-            style={{
-              // scale: voiceToneScale,
-              // opacity: voiceToneOpacity,
-              // y: voiceToneY,
-            }}
-            className={`${styles.voiceTone} bg-[#FAD24B] p-5 text-white font-bold`}
-          >
-            Voice & Tone
-          </motion.div> */}
 
           <motion.div
             style={{
@@ -171,11 +164,11 @@ export default function Home () {
   );
 }
 
-{/* <div className={`${styles.motion} bg-[#C8AFF0] p-5 text-white font-bold rounded-br-[8px]`}>Motion</div> */}
-{/* <div className={`${styles.typo} bg-[#FF3300] p-5 text-white font-bold rounded-tr-[8px]`}>Typography</div> */}
-{/* <div className={`${styles.graphy} bg-[#B4DC19] p-5 text-white font-bold rounded-bl-[8px]`}>Graphy</div> */}
-{/* <div className={`${styles.framework} bg-[#283351] p-5 text-white font-bold rounded-tl-[8px]`}>Framework</div> */}
-{/* <div className={`${styles.imagery} bg-[#8A2F55] p-5 text-white font-bold`}>Imagery</div> */}
-{/* <div className={`${styles.voiceTone} bg-[#FAD24B] p-5 text-white font-bold`}>Voice & Tone</div> */}
+{/* <div className={`${styles.motion} bg-[#C8AFF0] p-5 text-white font-bold rounded-br-[8px]`}>Motion</div> */ }
+{/* <div className={`${styles.typo} bg-[#FF3300] p-5 text-white font-bold rounded-tr-[8px]`}>Typography</div> */ }
+{/* <div className={`${styles.graphy} bg-[#B4DC19] p-5 text-white font-bold rounded-bl-[8px]`}>Graphy</div> */ }
+{/* <div className={`${styles.framework} bg-[#283351] p-5 text-white font-bold rounded-tl-[8px]`}>Framework</div> */ }
+{/* <div className={`${styles.imagery} bg-[#8A2F55] p-5 text-white font-bold`}>Imagery</div> */ }
+{/* <div className={`${styles.voiceTone} bg-[#FAD24B] p-5 text-white font-bold`}>Voice & Tone</div> */ }
 {/* <div className={`${styles.dropColor} bg-[#F08A2E] p-5 text-white font-bold`}>Color</div> */ }
 // <div className={`${styles.logo} bg-[#5ED3EE] p-5 text-white font-bold`}>Logo</div>
