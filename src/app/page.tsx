@@ -6,31 +6,31 @@ export default function Home () {
     height: '100vh',
     display: 'grid',
     gap: '10px',
-    gridTemplateColumns: 'repeat(5, 1fr)',
-    gridTemplateRows: 'repeat(7, 1fr)',
+    gridTemplateColumns: '1fr 1fr 1fr 0.4fr 1fr 1fr 1fr',
+    gridTemplateRows: '1fr 1fr 1fr 0.8fr 1fr 1fr 1fr',
     gridTemplateAreas: `
-      "Framework voiceTone voiceTone Logo Typo"
-      "Framework voiceTone voiceTone Logo Typo"
-      "Framework voiceTone voiceTone Logo Typo"
-      "Framework dropColor icon Logo Motion"
-      "Graphy dropColor Imagery Imagery Motion"
-      "Graphy dropColor Imagery Imagery Motion"
-      "Graphy dropColor Imagery Imagery Motion"
+      "Framework voiceTone voiceTone voiceTone Logo Logo Typo"
+      "Framework voiceTone voiceTone voiceTone Logo Logo Typo"
+      "Framework voiceTone voiceTone voiceTone Logo Logo Typo"
+      "Framework dropColor dropColor icon Logo  Logo Motion"
+      "Graphy dropColor dropColor Imagery Imagery Imagery Motion"
+      "Graphy dropColor dropColor Imagery Imagery Imagery Motion"
+      "Graphy dropColor dropColor Imagery Imagery Imagery Motion"
     `,
   };
 
   return (
     <>
-      <div style={containerStyle}>
-        <div style={{ gridArea: 'voiceTone', backgroundColor: '#f59e0b', padding: '20px', borderRadius: '8px', color: 'white', fontWeight: 'bold' }}>Voice & Tone</div>
-        <div style={{ gridArea: 'dropColor', backgroundColor: '#ef4444', padding: '20px', borderRadius: '8px', color: 'white', fontWeight: 'bold' }}>Color</div>
-        <div style={{ gridArea: 'icon', backgroundColor: '#3b82f6', padding: '20px', borderRadius: '8px', color: 'white', fontWeight: 'bold' }}>Icon</div>
-        <div style={{ gridArea: 'Imagery', backgroundColor: '#10b981', padding: '20px', borderRadius: '8px', color: 'white', fontWeight: 'bold' }}>Imagery</div>
-        <div style={{ gridArea: 'Logo', backgroundColor: '#8b5cf6', padding: '20px', borderRadius: '8px', color: 'white', fontWeight: 'bold' }}>Logo</div>
-        <div style={{ gridArea: 'Framework', backgroundColor: '#6b7280', padding: '20px', borderRadius: '8px', color: 'white', fontWeight: 'bold' }}>Framework</div>
-        <div style={{ gridArea: 'Graphy', backgroundColor: '#14b8a6', padding: '20px', borderRadius: '8px', color: 'white', fontWeight: 'bold' }}>Graphy</div>
-        <div style={{ gridArea: 'Typo', backgroundColor: '#f97316', padding: '20px', borderRadius: '8px', color: 'white', fontWeight: 'bold' }}>Typography</div>
-        <div style={{ gridArea: 'Motion', backgroundColor: '#ec4899', padding: '20px', borderRadius: '8px', color: 'white', fontWeight: 'bold' }}>Motion</div>
+      <div style={containerStyle} className="p-4">
+        <div style={{ gridArea: 'voiceTone', backgroundColor: '#FAD24B', padding: '20px',  color: 'white', fontWeight: 'bold' }}>Voice & Tone</div>
+        <div style={{ gridArea: 'dropColor', backgroundColor: '#F08A2E', padding: '20px',  color: 'white', fontWeight: 'bold' }}>Color</div>
+        <div style={{ gridArea: 'icon', backgroundColor: '#4000FF', padding: '20px',  color: 'white', fontWeight: 'bold' }}>Icon</div>
+        <div style={{ gridArea: 'Imagery', backgroundColor: '#8A2F55', padding: '20px',  color: 'white', fontWeight: 'bold' }}>Imagery</div>
+        <div style={{ gridArea: 'Logo', backgroundColor: '#5ED3EE', padding: '20px',  color: 'white', fontWeight: 'bold' }}>Logo</div>
+        <div style={{ gridArea: 'Framework', backgroundColor: '#283351', padding: '20px',  color: 'white', fontWeight: 'bold' }} className="rounded-tl-[8px]">Framework</div>
+        <div style={{ gridArea: 'Graphy', backgroundColor: '#B4DC19', padding: '20px',  color: 'white', fontWeight: 'bold' }} className="rounded-bl-[8px]">Graphy</div>
+        <div style={{ gridArea: 'Typo', backgroundColor: '#FF3300', padding: '20px',  color: 'white', fontWeight: 'bold' }} className="rounded-tr-[8px]">Typography</div>
+        <div style={{ gridArea: 'Motion', backgroundColor: '#C8AFF0', padding: '20px',  color: 'white', fontWeight: 'bold' }} className="rounded-br-[8px]">Motion</div>
       </div>
     </>
   );
