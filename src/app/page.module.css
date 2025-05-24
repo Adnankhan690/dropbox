@@ -1,0 +1,32 @@
+.container {
+  height: 100vh;
+  background-color: white;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+  gap: 0;
+  width: 24rem;
+  height: 24rem;
+}
+
+.cell {
+  border-right: 1px dotted #9ca3af;
+  border-bottom: 1px dotted #9ca3af;
+  height: 100%;
+  width: 100%;
+}
+
+.cellNoRightBorder {
+  border-right: none;
+}
+
+.cellNoBottomBorder {
+  border-bottom: none;
+}

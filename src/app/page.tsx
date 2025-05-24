@@ -1,7 +1,37 @@
+'use client';
+
 export default function Home () {
+
+  const containerStyle = {
+    height: '100vh',
+    display: 'grid',
+    gap: '10px',
+    gridTemplateColumns: 'repeat(5, 1fr)',
+    gridTemplateRows: 'repeat(7, 1fr)',
+    gridTemplateAreas: `
+      "Framework voiceTone voiceTone Logo Typo"
+      "Framework voiceTone voiceTone Logo Typo"
+      "Framework voiceTone voiceTone Logo Typo"
+      "Framework dropColor icon Logo Motion"
+      "Graphy dropColor Imagery Imagery Motion"
+      "Graphy dropColor Imagery Imagery Motion"
+      "Graphy dropColor Imagery Imagery Motion"
+    `,
+  };
+
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-50">
-      <h1 className="text-4xl font-bold text-gray-800">Hello</h1>
-    </div>
+    <>
+      <div style={containerStyle}>
+        <div style={{ gridArea: 'voiceTone', backgroundColor: '#f59e0b', padding: '20px', borderRadius: '8px', color: 'white', fontWeight: 'bold' }}>Voice & Tone</div>
+        <div style={{ gridArea: 'dropColor', backgroundColor: '#ef4444', padding: '20px', borderRadius: '8px', color: 'white', fontWeight: 'bold' }}>Color</div>
+        <div style={{ gridArea: 'icon', backgroundColor: '#3b82f6', padding: '20px', borderRadius: '8px', color: 'white', fontWeight: 'bold' }}>Icon</div>
+        <div style={{ gridArea: 'Imagery', backgroundColor: '#10b981', padding: '20px', borderRadius: '8px', color: 'white', fontWeight: 'bold' }}>Imagery</div>
+        <div style={{ gridArea: 'Logo', backgroundColor: '#8b5cf6', padding: '20px', borderRadius: '8px', color: 'white', fontWeight: 'bold' }}>Logo</div>
+        <div style={{ gridArea: 'Framework', backgroundColor: '#6b7280', padding: '20px', borderRadius: '8px', color: 'white', fontWeight: 'bold' }}>Framework</div>
+        <div style={{ gridArea: 'Graphy', backgroundColor: '#14b8a6', padding: '20px', borderRadius: '8px', color: 'white', fontWeight: 'bold' }}>Graphy</div>
+        <div style={{ gridArea: 'Typo', backgroundColor: '#f97316', padding: '20px', borderRadius: '8px', color: 'white', fontWeight: 'bold' }}>Typography</div>
+        <div style={{ gridArea: 'Motion', backgroundColor: '#ec4899', padding: '20px', borderRadius: '8px', color: 'white', fontWeight: 'bold' }}>Motion</div>
+      </div>
+    </>
   );
 }

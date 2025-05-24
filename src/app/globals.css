@@ -2,6 +2,32 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Custom global styles */
+.graph-container {
+  height: 100vh;
+  background-color: white;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.graph-grid {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+  gap: 0;
+  width: 24rem;
+  height: 24rem;
+}
+
+.graph-cell {
+  border-right: 1px dotted #9ca3af;
+  border-bottom: 1px dotted #9ca3af;
+  height: 100%;
+  width: 100%;
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
