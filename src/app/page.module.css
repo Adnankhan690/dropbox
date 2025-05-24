@@ -30,3 +30,56 @@
 .cellNoBottomBorder {
   border-bottom: none;
 }
+
+.gridContainer {
+  height: 100vh;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 1fr 1fr 1fr 0.4fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 0.8fr 1fr 1fr 1fr;
+  padding: 10px;
+  grid-template-areas:
+    "Framework voiceTone voiceTone voiceTone Logo Logo Typo"
+    "Framework voiceTone voiceTone voiceTone Logo Logo Typo"
+    "Framework voiceTone voiceTone voiceTone Logo Logo Typo"
+    "Framework dropColor dropColor icon Logo Logo Motion"
+    "Graphy dropColor dropColor Imagery Imagery Imagery Motion"
+    "Graphy dropColor dropColor Imagery Imagery Imagery Motion"
+    "Graphy dropColor dropColor Imagery Imagery Imagery Motion";
+}
+
+.voiceTone {
+  grid-area: voiceTone;
+}
+
+.dropColor {
+  grid-area: dropColor;
+}
+
+.icon {
+  grid-area: icon;
+}
+
+.imagery {
+  grid-area: Imagery;
+}
+
+.logo {
+  grid-area: Logo;
+}
+
+.framework {
+  grid-area: Framework;
+}
+
+.graphy {
+  grid-area: Graphy;
+}
+
+.typo {
+  grid-area: Typo;
+}
+
+.motion {
+  grid-area: Motion;
+}
