@@ -1,0 +1,1 @@
+export type CardType = 'color' | 'logo' | 'voiceTone' | 'imagery' | 'framework' | 'iconography' | 'typography' | 'motion'; 
