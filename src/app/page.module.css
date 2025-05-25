@@ -35,18 +35,18 @@
   height: 100vh;
   display: grid;
   gap: 10px;
-  grid-template-columns: 1fr 1fr 1fr 0.4fr 1fr 1fr 1fr;
+  grid-template-columns: 1.2fr 1.7fr 0.3fr 1.7fr 1.2fr;
   grid-template-rows: 1fr 1fr 1fr 0.8fr 1fr 1fr 1fr;
   padding: 10px;
   position: relative;
   grid-template-areas:
-    "Framework voiceTone voiceTone voiceTone Logo Logo Typo"
-    "Framework voiceTone voiceTone voiceTone Logo Logo Typo"
-    "Framework voiceTone voiceTone voiceTone Logo Logo Typo"
-    "Framework dropColor dropColor icon Logo Logo Motion"
-    "Graphy dropColor dropColor Imagery Imagery Imagery Motion"
-    "Graphy dropColor dropColor Imagery Imagery Imagery Motion"
-    "Graphy dropColor dropColor Imagery Imagery Imagery Motion";
+    "Framework voiceTone voiceTone Logo Typo"
+    "Framework voiceTone voiceTone Logo Typo"
+    "Framework voiceTone voiceTone Logo Typo"
+    "Framework dropColor icon Logo Motion"
+    "Graphy dropColor Imagery Imagery Motion"
+    "Graphy dropColor Imagery Imagery Motion"
+    "Graphy dropColor Imagery Imagery  Motion";
 }
 
 .voiceTone {
@@ -90,19 +90,19 @@
 .imagery {
   grid-area: Imagery;
   position: relative;
-    z-index: 2;
+  z-index: 2;
 }
 
 .logo {
   grid-area: Logo;
   position: relative;
-    z-index: 2;
+  z-index: 2;
 }
 
 .framework {
   grid-area: Framework;
   position: relative;
-    z-index: 2;
+  z-index: 2;
 }
 
 .graphy {
