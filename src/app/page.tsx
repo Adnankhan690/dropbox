@@ -5,17 +5,21 @@ import styles from './page.module.css';
 export default function Home () {
   const { scrollYProgress } = useScroll();
 
-  const iconScale = useTransform(scrollYProgress, [0, 1], [6, 1]);
+  // Immediate size change when scrolling starts, then scaling animation
+  const iconScale = useTransform(scrollYProgress, [0, 0.01, 0.3, 1], [8.57, 4, 4, 1]);
+
+  // Color and background changes happen when scaling animation starts
   const backgroundColor = useTransform(
     scrollYProgress,
-    [0, 1],
-    ['transparent', '#4000FF']
+    [0, 0.01, 0.3, 1],
+    ['transparent', '#4000FF', '#4000FF', '#4000FF']
   );
   const textColor = useTransform(
     scrollYProgress,
-    [0, 1],
-    ['#4000FF', 'white']
+    [0, 0.01, 0.3, 1],
+    ['#4000FF', 'white', 'white', 'white']
   );
+  
 
   // Separate scale for other divs (scale only, no color changes)
   // const voiceToneScale = useTransform(scrollProgress, [0.3, 1], [2, 1]);
@@ -44,8 +48,9 @@ export default function Home () {
   // Constant thin value for all lines
   const lineThickness = 0.3;
 
-  // Inverse scales to keep lines thin
-  const iconLineScale = useTransform(scrollYProgress, [0, 1], [1 / 10, 1]);
+  // Inverse scales to keep lines thin - updated to match new icon scaling
+  const iconLineScale = useTransform(scrollYProgress, [0, 0.01, 0.3, 1], [1 / 8.57, 1 / 4, 1 / 4, 1]);
+
   const colorLogoLineScale = useTransform(scrollYProgress, [0.3, 1], [1 / 1.5, 1]);
   const voiceImageryLineScale = useTransform(scrollYProgress, [0.4, 1], [1 / 1.7, 1]);
   const cornerLineScale = useTransform(scrollYProgress, [0.8, 1], [1 / 1.7, 1]);
@@ -208,13 +213,7 @@ export default function Home () {
 {/* <div className={`${styles.imagery} bg-[#8A2F55] p-5 text-white font-bold`}>Imagery</div> */ }
 {/* <div className={`${styles.voiceTone} bg-[#FAD24B] p-5 text-white font-bold`}>Voice & Tone</div> */ }
 {/* <div className={`${styles.dropColor} bg-[#F08A2E] p-5 text-white font-bold`}>Color</div> */ }
-// <div className={`${styles.logo} bg-[#5ED3EE] p-5 text-white font-bold`}>Logo</div>
-
-
-
-
-
-// 'use client';
+// <div className={`${styles.logo} bg-[#5ED3EE] p-5 text-white font-bold`}>Logo</div>// 'use client';
 // import { motion, useScroll, useTransform } from 'framer-motion';
 // import styles from './page.module.css';
 
@@ -428,3 +427,8 @@ export default function Home () {
 // {/* <div className={`${styles.voiceTone} bg-[#FAD24B] p-5 text-white font-bold`}>Voice & Tone</div> */ }
 // {/* <div className={`${styles.dropColor} bg-[#F08A2E] p-5 text-white font-bold`}>Color</div> */ }
 // // <div className={`${styles.logo} bg-[#5ED3EE] p-5 text-white font-bold`}>Logo</div>
+
+
+
+
+
