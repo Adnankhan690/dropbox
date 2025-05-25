@@ -34,7 +34,6 @@
 .gridContainer {
   height: 100vh;
   display: grid;
-  border: 1px solid red;
   gap: 10px;
   grid-template-columns: 1fr 1fr 1fr 0.4fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 0.8fr 1fr 1fr 1fr;
@@ -60,7 +59,7 @@
 
 .icon {
   grid-area: icon;
-  border: 1px solid #4000FF;
+  /* border: 1px solid #4000FF; */
   position: relative;
   z-index: 2;
 }
@@ -90,24 +89,36 @@
 
 .imagery {
   grid-area: Imagery;
+  position: relative;
+    z-index: 2;
 }
 
 .logo {
   grid-area: Logo;
+  position: relative;
+    z-index: 2;
 }
 
 .framework {
   grid-area: Framework;
+  position: relative;
+    z-index: 2;
 }
 
 .graphy {
   grid-area: Graphy;
+  position: relative;
+  z-index: 2;
 }
 
 .typo {
   grid-area: Typo;
+  position: relative;
+  z-index: 2;
 }
 
 .motion {
   grid-area: Motion;
+  position: relative;
+  z-index: 2;
 }
