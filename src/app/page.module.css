@@ -5,7 +5,6 @@
   grid-template-columns: 1.2fr 1.7fr 0.3fr 1.7fr 1.2fr;
   grid-template-rows: 1fr 0.23fr 1fr;
   padding: 10px;
-  /* position: relative; */
   grid-template-areas:
     "Framework voiceTone voiceTone Logo Typo"
     "Framework dropColor icon Logo Motion"
@@ -46,4 +45,36 @@
 
 .motion {
   grid-area: Motion;
+}
+
+@media (max-width: 1024px) {
+  .gridContainer {
+    display: grid;
+    gap: 5px;
+    height: 100dvh;
+    min-height: 100vh;
+    padding: 5px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(5, minmax(0, 1fr));
+    grid-template-areas:
+      "Framework voiceTone voiceTone"
+      "Logo Logo Typo"
+      "Graphy icon Typo"
+      "Graphy dropColor dropColor"
+      "Imagery Imagery Motion";
+  }
+
+
+  .framework,
+  .voiceTone,
+  .logo,
+  .typo,
+  .dropColor,
+  .icon,
+  .imagery,
+  .graphy,
+  .motion {
+    min-height: 0;
+    overflow: hidden;
+  }
 }
