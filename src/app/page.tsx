@@ -4,7 +4,6 @@ import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import styles from './page.module.css';
 
-// Components
 import {
   IconCard,
   ColorCard,
@@ -17,7 +16,6 @@ import {
   MotionCard
 } from '../components/cards';
 
-// Types and Hooks
 import { CardType } from '../types/cards';
 import { useCardAnimations } from '../hooks/useCardAnimations';
 
@@ -25,13 +23,13 @@ export default function Home () {
   const router = useRouter();
   const [hoveredCard, setHoveredCard] = useState<CardType | null>(null);
 
-  // Get all animation values from custom hook
   const {
     iconCardScale,
     iconCardBackgroundColor,
     iconCardTextColor,
     iconCardDimensions,
     iconCardLineScale,
+    lineOpacity,
     colorLogoCardsScale,
     colorCardTranslateX,
     logoCardTranslateX,
@@ -49,114 +47,118 @@ export default function Home () {
     motionCardTranslateY,
   } = useCardAnimations();
 
-  // Card click handler - navigate to same page (refresh)
   const handleCardClick = (cardType: CardType) => {
     console.log(`Clicked on ${cardType} card`);
-    // Navigate to the same page (refresh/reload)
     router.push('/');
-    // Alternative: window.location.reload() for hard refresh
   };
 
   return (
     <>
-      <div className='h-[300vh]'>
-        <div
-          className={styles.gridContainer}
-          style={{ position: 'fixed', top: 0, left: 0, right: 0, bottom: 0 }}
-        >
-          {/* Icon Card - Center */}
-          <IconCard
-            scale={iconCardScale}
-            backgroundColor={iconCardBackgroundColor}
-            textColor={iconCardTextColor}
-            iconCardSize={iconCardDimensions}
-            iconLineScale={iconCardLineScale}
-          />
+      <div className='h-[300vh] '></div>
+      <div
+        className={styles.gridContainer}
+        style={{ position: 'fixed', top: 0, left: 0, right: 0, bottom: 0 }}
+      >
+        <IconCard
+          scale={iconCardScale}
+          backgroundColor={iconCardBackgroundColor}
+          textColor={iconCardTextColor}
+          iconCardSize={iconCardDimensions}
+          iconLineScale={iconCardLineScale}
+          iconLineOpacity={lineOpacity}
+        />
 
-          {/* Color Card */}
-          <ColorCard
-            scale={colorLogoCardsScale}
-            x={colorCardTranslateX}
-            isHovered={hoveredCard === 'color'}
-            onMouseEnter={() => setHoveredCard('color')}
-            onMouseLeave={() => setHoveredCard(null)}
-            onClick={() => handleCardClick('color')}
-          />
+        <ColorCard
+          scale={colorLogoCardsScale}
+          x={colorCardTranslateX}
+          isHovered={hoveredCard === 'color'}
+          onMouseEnter={() => setHoveredCard('color')}
+          onMouseLeave={() => setHoveredCard(null)}
+          onClick={() => handleCardClick('color')}
+          lineThickness={0.3}
+          lineOpacity={lineOpacity}
+        />
 
-          {/* Logo Card */}
-          <LogoCard
-            scale={colorLogoCardsScale}
-            x={logoCardTranslateX}
-            isHovered={hoveredCard === 'logo'}
-            onMouseEnter={() => setHoveredCard('logo')}
-            onMouseLeave={() => setHoveredCard(null)}
-            onClick={() => handleCardClick('logo')}
-          />
+        <LogoCard
+          scale={colorLogoCardsScale}
+          x={logoCardTranslateX}
+          isHovered={hoveredCard === 'logo'}
+          onMouseEnter={() => setHoveredCard('logo')}
+          onMouseLeave={() => setHoveredCard(null)}
+          onClick={() => handleCardClick('logo')}
+          lineThickness={0.3}
+          lineOpacity={lineOpacity}
+        />
 
-          {/* Voice & Tone Card */}
-          <VoiceToneCard
-            scale={voiceImageryCardsScale}
-            y={voiceToneCardTranslateY}
-            isHovered={hoveredCard === 'voiceTone'}
-            onMouseEnter={() => setHoveredCard('voiceTone')}
-            onMouseLeave={() => setHoveredCard(null)}
-            onClick={() => handleCardClick('voiceTone')}
-          />
+        <ImageryCard
+          scale={voiceImageryCardsScale}
+          y={imageryCardTranslateY}
+          isHovered={hoveredCard === 'imagery'}
+          onMouseEnter={() => setHoveredCard('imagery')}
+          onMouseLeave={() => setHoveredCard(null)}
+          onClick={() => handleCardClick('imagery')}
+          lineThickness={0.3}
+          lineOpacity={lineOpacity}
+        />
 
-          {/* Imagery Card */}
-          <ImageryCard
-            scale={voiceImageryCardsScale}
-            y={imageryCardTranslateY}
-            isHovered={hoveredCard === 'imagery'}
-            onMouseEnter={() => setHoveredCard('imagery')}
-            onMouseLeave={() => setHoveredCard(null)}
-            onClick={() => handleCardClick('imagery')}
-          />
+        <VoiceToneCard
+          scale={voiceImageryCardsScale}
+          y={voiceToneCardTranslateY}
+          isHovered={hoveredCard === 'voiceTone'}
+          onMouseEnter={() => setHoveredCard('voiceTone')}
+          onMouseLeave={() => setHoveredCard(null)}
+          onClick={() => handleCardClick('voiceTone')}
+          lineThickness={0.3}
+          lineOpacity={lineOpacity}
+        />
 
-          {/* Framework Card */}
-          <FrameworkCard
-            scale={cornerCardsScale}
-            x={frameworkCardTranslateX}
-            y={frameworkCardTranslateY}
-            isHovered={hoveredCard === 'framework'}
-            onMouseEnter={() => setHoveredCard('framework')}
-            onMouseLeave={() => setHoveredCard(null)}
-            onClick={() => handleCardClick('framework')}
-          />
+        <FrameworkCard
+          scale={cornerCardsScale}
+          x={frameworkCardTranslateX}
+          y={frameworkCardTranslateY}
+          isHovered={hoveredCard === 'framework'}
+          onMouseEnter={() => setHoveredCard('framework')}
+          onMouseLeave={() => setHoveredCard(null)}
+          onClick={() => handleCardClick('framework')}
+          lineThickness={0.3}
+          lineOpacity={lineOpacity}
+        />
 
-          {/* Iconography Card */}
-          <IconographyCard
-            scale={cornerCardsScale}
-            x={iconographyCardTranslateX}
-            y={iconographyCardTranslateY}
-            isHovered={hoveredCard === 'iconography'}
-            onMouseEnter={() => setHoveredCard('iconography')}
-            onMouseLeave={() => setHoveredCard(null)}
-            onClick={() => handleCardClick('iconography')}
-          />
+        <IconographyCard
+          scale={cornerCardsScale}
+          x={iconographyCardTranslateX}
+          y={iconographyCardTranslateY}
+          isHovered={hoveredCard === 'iconography'}
+          onMouseEnter={() => setHoveredCard('iconography')}
+          onMouseLeave={() => setHoveredCard(null)}
+          onClick={() => handleCardClick('iconography')}
+          lineThickness={0.3}
+          lineOpacity={lineOpacity}
+        />
 
-          {/* Typography Card */}
-          <TypographyCard
-            scale={cornerCardsScale}
-            x={typographyCardTranslateX}
-            y={typographyCardTranslateY}
-            isHovered={hoveredCard === 'typography'}
-            onMouseEnter={() => setHoveredCard('typography')}
-            onMouseLeave={() => setHoveredCard(null)}
-            onClick={() => handleCardClick('typography')}
-          />
+        <TypographyCard
+          scale={cornerCardsScale}
+          x={typographyCardTranslateX}
+          y={typographyCardTranslateY}
+          isHovered={hoveredCard === 'typography'}
+          onMouseEnter={() => setHoveredCard('typography')}
+          onMouseLeave={() => setHoveredCard(null)}
+          onClick={() => handleCardClick('typography')}
+          lineThickness={0.3}
+          lineOpacity={lineOpacity}
+        />
 
-          {/* Motion Card */}
-          <MotionCard
-            scale={cornerCardsScale}
-            x={motionCardTranslateX}
-            y={motionCardTranslateY}
-            isHovered={hoveredCard === 'motion'}
-            onMouseEnter={() => setHoveredCard('motion')}
-            onMouseLeave={() => setHoveredCard(null)}
-            onClick={() => handleCardClick('motion')}
-          />
-        </div>
+        <MotionCard
+          scale={cornerCardsScale}
+          x={motionCardTranslateX}
+          y={motionCardTranslateY}
+          isHovered={hoveredCard === 'motion'}
+          onMouseEnter={() => setHoveredCard('motion')}
+          onMouseLeave={() => setHoveredCard(null)}
+          onClick={() => handleCardClick('motion')}
+          lineThickness={0.3}
+          lineOpacity={lineOpacity}
+        />
       </div>
     </>
   );
