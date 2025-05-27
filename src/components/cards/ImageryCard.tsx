@@ -26,10 +26,6 @@ export default function ImageryCard ({
       onMouseLeave={onMouseLeave}
       onClick={onClick}
     >
-      {/* <motion.hr className='absolute top-[-1px] left-[-100vw] w-[200vw] h-[1px] bg-blue-500 border-0 m-0 p-0 ' style={{ scaleY: lineThickness, opacity: lineOpacity }} />
-      <motion.hr className='absolute bottom-[-1px] left-[-100vw] w-[200vw] h-[1px] bg-blue-500 border-0 m-0 p-0 ' style={{ scaleY: lineThickness, opacity: lineOpacity }} />
-      <motion.hr className='absolute left-[-1px] top-[-100vh] w-[1px] h-[200vh] bg-blue-500 border-0 m-0 p-0 ' style={{ scaleX: lineThickness, opacity: lineOpacity }} />
-      <motion.hr className='absolute right-[-1px] top-[-100vh] w-[1px] h-[200vh] bg-blue-500 border-0 m-0 p-0 ' style={{ scaleX: lineThickness, opacity: lineOpacity }} /> */}
       <div className="h-full flex flex-col">
         <h2 className="text-4xl font-bold mb-auto">Imagery</h2>
         <div className="flex-1 flex items-center justify-center">
