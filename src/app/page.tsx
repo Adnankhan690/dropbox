@@ -27,26 +27,26 @@ export default function Home () {
 
   // Get all animation values from custom hook
   const {
-    iconScaleBase,
-    backgroundColor,
-    textColor,
-    iconCardSize,
-    iconLineScale,
-    colorAndLogoScale,
-    colorX,
-    logoX,
-    voiceToneAndImageryScale,
-    voiceToneY,
-    imageryY,
-    cornerCardScale,
-    frameworkX,
-    frameworkY,
-    graphyX,
-    graphyY,
-    typoX,
-    typoY,
-    motionX,
-    motionY,
+    iconCardScale,
+    iconCardBackgroundColor,
+    iconCardTextColor,
+    iconCardDimensions,
+    iconCardLineScale,
+    colorLogoCardsScale,
+    colorCardTranslateX,
+    logoCardTranslateX,
+    voiceImageryCardsScale,
+    voiceToneCardTranslateY,
+    imageryCardTranslateY,
+    cornerCardsScale,
+    frameworkCardTranslateX,
+    frameworkCardTranslateY,
+    iconographyCardTranslateX,
+    iconographyCardTranslateY,
+    typographyCardTranslateX,
+    typographyCardTranslateY,
+    motionCardTranslateX,
+    motionCardTranslateY,
   } = useCardAnimations();
 
   // Card click handler - navigate to same page (refresh)
@@ -66,17 +66,17 @@ export default function Home () {
         >
           {/* Icon Card - Center */}
           <IconCard
-            scale={iconScaleBase}
-            backgroundColor={backgroundColor}
-            textColor={textColor}
-            iconCardSize={iconCardSize}
-            iconLineScale={iconLineScale}
+            scale={iconCardScale}
+            backgroundColor={iconCardBackgroundColor}
+            textColor={iconCardTextColor}
+            iconCardSize={iconCardDimensions}
+            iconLineScale={iconCardLineScale}
           />
 
           {/* Color Card */}
           <ColorCard
-            scale={colorAndLogoScale}
-            x={colorX}
+            scale={colorLogoCardsScale}
+            x={colorCardTranslateX}
             isHovered={hoveredCard === 'color'}
             onMouseEnter={() => setHoveredCard('color')}
             onMouseLeave={() => setHoveredCard(null)}
@@ -85,8 +85,8 @@ export default function Home () {
 
           {/* Logo Card */}
           <LogoCard
-            scale={colorAndLogoScale}
-            x={logoX}
+            scale={colorLogoCardsScale}
+            x={logoCardTranslateX}
             isHovered={hoveredCard === 'logo'}
             onMouseEnter={() => setHoveredCard('logo')}
             onMouseLeave={() => setHoveredCard(null)}
@@ -95,8 +95,8 @@ export default function Home () {
 
           {/* Voice & Tone Card */}
           <VoiceToneCard
-            scale={voiceToneAndImageryScale}
-            y={voiceToneY}
+            scale={voiceImageryCardsScale}
+            y={voiceToneCardTranslateY}
             isHovered={hoveredCard === 'voiceTone'}
             onMouseEnter={() => setHoveredCard('voiceTone')}
             onMouseLeave={() => setHoveredCard(null)}
@@ -105,8 +105,8 @@ export default function Home () {
 
           {/* Imagery Card */}
           <ImageryCard
-            scale={voiceToneAndImageryScale}
-            y={imageryY}
+            scale={voiceImageryCardsScale}
+            y={imageryCardTranslateY}
             isHovered={hoveredCard === 'imagery'}
             onMouseEnter={() => setHoveredCard('imagery')}
             onMouseLeave={() => setHoveredCard(null)}
@@ -115,9 +115,9 @@ export default function Home () {
 
           {/* Framework Card */}
           <FrameworkCard
-            scale={cornerCardScale}
-            x={frameworkX}
-            y={frameworkY}
+            scale={cornerCardsScale}
+            x={frameworkCardTranslateX}
+            y={frameworkCardTranslateY}
             isHovered={hoveredCard === 'framework'}
             onMouseEnter={() => setHoveredCard('framework')}
             onMouseLeave={() => setHoveredCard(null)}
@@ -126,9 +126,9 @@ export default function Home () {
 
           {/* Iconography Card */}
           <IconographyCard
-            scale={cornerCardScale}
-            x={graphyX}
-            y={graphyY}
+            scale={cornerCardsScale}
+            x={iconographyCardTranslateX}
+            y={iconographyCardTranslateY}
             isHovered={hoveredCard === 'iconography'}
             onMouseEnter={() => setHoveredCard('iconography')}
             onMouseLeave={() => setHoveredCard(null)}
@@ -137,9 +137,9 @@ export default function Home () {
 
           {/* Typography Card */}
           <TypographyCard
-            scale={cornerCardScale}
-            x={typoX}
-            y={typoY}
+            scale={cornerCardsScale}
+            x={typographyCardTranslateX}
+            y={typographyCardTranslateY}
             isHovered={hoveredCard === 'typography'}
             onMouseEnter={() => setHoveredCard('typography')}
             onMouseLeave={() => setHoveredCard(null)}
@@ -148,9 +148,9 @@ export default function Home () {
 
           {/* Motion Card */}
           <MotionCard
-            scale={cornerCardScale}
-            x={motionX}
-            y={motionY}
+            scale={cornerCardsScale}
+            x={motionCardTranslateX}
+            y={motionCardTranslateY}
             isHovered={hoveredCard === 'motion'}
             onMouseEnter={() => setHoveredCard('motion')}
             onMouseLeave={() => setHoveredCard(null)}
